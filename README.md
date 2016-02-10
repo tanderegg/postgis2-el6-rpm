@@ -42,11 +42,10 @@ Build RPM using Vagrant
 Build RPM on server
 
     1. Once repo is cloned, run "sh ./bootstrap.sh" (sudo privileges are required)
-    2. cd to ~/rpmbuild
-    3. Run the following command
+    1. cd to ~/rpmbuild
+    1. Ensure that pg_config is accessible, and set LD_LIBRARY_PATH to psql lib folder if needed.
+    1. Run the following command
       rpmbuild -ba /SPECS/postgis2.spec  --define 'pg_dir /usr/pgsql-9.4'  Substitute your custom Postgres path as needed.
-
-    Please note that "pg_config" MUST be accessible in users PATH
 
 ## Installing the RPM
 
